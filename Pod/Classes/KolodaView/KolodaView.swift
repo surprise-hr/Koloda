@@ -628,7 +628,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
         let validDirection = delegate?.koloda(self, allowedDirectionsForIndex: currentCardIndex).contains(direction) ?? true
         guard validDirection else { return }
         
-        if !animationSemaphore.isAnimating {
+//        if !animationSemaphore.isAnimating {
             if let frontCard = visibleCards.first, !frontCard.dragBegin {
                 
                 if visibleCards.count > 1 {
@@ -643,7 +643,7 @@ open class KolodaView: UIView, DraggableCardDelegate {
                 }
                 frontCard.delegate = nil
             }
-        }
+//        }
     }
     
     public func resetCurrentCardIndex() {
